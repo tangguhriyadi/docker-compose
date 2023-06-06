@@ -18,7 +18,7 @@ services:
       KONG_PG_DATABASE: ${KONG_PG_DATABASE:-kong}
       KONG_PG_HOST: db
       KONG_PG_USER: ${KONG_PG_USER:-kong}
-      KONG_PG_PASSWORD_FILE: /run/secrets/kong_postgres_password
+      KONG_PG_PASSWORD: kong
     secrets:
       - kong_postgres_password
     networks:
@@ -38,7 +38,7 @@ services:
       KONG_PG_DATABASE: ${KONG_PG_DATABASE:-kong}
       KONG_PG_HOST: db
       KONG_PG_USER: ${KONG_PG_USER:-kong}
-      KONG_PG_PASSWORD_FILE: /run/secrets/kong_postgres_password
+      KONG_PG_PASSWORD: kong
     secrets:
       - kong_postgres_password
     networks:
@@ -66,7 +66,7 @@ services:
       KONG_PG_USER: ${KONG_PG_USER:-kong}
       KONG_PROXY_ACCESS_LOG: /dev/stdout
       KONG_PROXY_ERROR_LOG: /dev/stderr
-      KONG_PG_PASSWORD_FILE: /run/secrets/kong_postgres_password
+      KONG_PG_PASSWORD: kong
     secrets:
       - kong_postgres_password
     networks:
@@ -91,7 +91,7 @@ services:
     environment:
       POSTGRES_DB: ${KONG_PG_DATABASE:-kong}
       POSTGRES_USER: ${KONG_PG_USER:-kong}
-      POSTGRES_PASSWORD_FILE: /run/secrets/kong_postgres_password
+      POSTGRES_PASSWORD: kong
     secrets:
       - kong_postgres_password
     healthcheck:
