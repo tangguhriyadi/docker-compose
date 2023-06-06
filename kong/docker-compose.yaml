@@ -114,7 +114,7 @@ services:
   konga-prepare:
     container_name: "konga_prepare"
     image: pantsel/konga
-    command: "-c prepare -a postgres -u postgresql://kong:${KONG_PG_PASSWORD:-kong}@db:5432/konga"
+    command: "-c prepare -a postgres -u postgresql://kong:kong@db:5432/konga"
     networks:
       - kong-net
     restart: on-failure
