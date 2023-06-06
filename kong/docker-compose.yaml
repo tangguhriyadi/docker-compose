@@ -87,7 +87,7 @@ services:
         condition: on-failure
     
   db:
-    image: postgres:latest
+    image: postgres:9.5
     environment:
       POSTGRES_DB: ${KONG_PG_DATABASE:-kong}
       POSTGRES_USER: ${KONG_PG_USER:-kong}
