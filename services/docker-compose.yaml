@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  postgre-example:
+    image: postgres:latest
+    container_name: postgre-example
+    ports:
+      - protocol: tcp
+        published: 5555
+        target: 5432
+    environment:
+      POSTGRES_PASSWORD: edan
+      POSTGRES_DB: edan
