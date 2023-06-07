@@ -6,8 +6,8 @@ services:
     container_name: user-service
     ports:
       - protocol: tcp
-        published: 1001
-        target: 1001
+        published: 8081
+        target: 8081
     environment:
       JWT_SECRET_KEY: Asen1ojw4lmA:LKJu2309124ujlksfjlksajf09qu41oi2j4k
       DB_POSTGRES_HOST: 18.140.2.142
