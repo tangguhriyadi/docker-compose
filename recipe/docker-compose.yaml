@@ -11,9 +11,9 @@ services:
     environment:
       POSTGRES_PASSWORD: user_service
       POSTGRES_DB: user_service
-  content-service:
+  content-service-db:
     image: postgres:latest
-    container_name: content-service
+    container_name: content-service-db
     ports:
       - protocol: tcp
         published: 5434
