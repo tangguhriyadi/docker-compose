@@ -17,3 +17,4 @@ services:
     environment:
       KAFKA_ADVERTISED_HOST_NAME: 18.140.2.142
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_HEAP_OPTS: -Xmx256M -Xms128M
